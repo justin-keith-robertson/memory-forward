@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-VERSION = '0.0.1a5'
+VERSION = '0.0.1a6'
 DESCRIPTION = 'A CLI tool for batch editing files'
 LONG_DESCRIPTION = 'A CLI tool developed for memory forward to help batch edit files, and their metadata.'
 
@@ -19,7 +19,7 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    py_modules=["app", "memoryforward"],
+    py_modules=["app"],
     install_requires=["typer==0.4.1"],
     python_requires=">=3.7",
     keywords=['python', 'memory-forward'],
@@ -32,6 +32,6 @@ setup(
     ],
     entry_points = '''
         [console_scripts]
-        memory-forward=memoryforward:cli
+        memory-forward=app.memoryforward:cli
     '''
 )
