@@ -1,5 +1,4 @@
-from setuptools import setup, find_packages
-import codecs
+from setuptools import setup
 import os
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -7,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-VERSION = '0.0.1a3'
+VERSION = '0.0.1a4'
 DESCRIPTION = 'A CLI tool for batch editing files'
 LONG_DESCRIPTION = 'A CLI tool developed for memory forward to help batch edit files, and their metadata.'
 
@@ -20,7 +19,7 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    packages=find_packages(),
+    py_modules=["app", "memoryforward"],
     install_requires=["typer==0.4.1"],
     python_requires=">=3.7",
     keywords=['python', 'memory-forward'],
