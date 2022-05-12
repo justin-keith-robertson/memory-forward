@@ -8,6 +8,4 @@ app.command()(goodbye.goodbye)
 
 def cli():
     app()
-
-if __name__ == "__main__":
-    cli()
+    pass
