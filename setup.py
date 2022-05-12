@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-VERSION = '0.0.1a4'
+VERSION = '0.0.1a5'
 DESCRIPTION = 'A CLI tool for batch editing files'
 LONG_DESCRIPTION = 'A CLI tool developed for memory forward to help batch edit files, and their metadata.'
 

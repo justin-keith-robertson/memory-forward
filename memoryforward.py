@@ -8,4 +8,3 @@ app.command()(goodbye.goodbye)
 
 def cli():
     app()
-    pass
