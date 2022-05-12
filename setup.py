@@ -4,10 +4,12 @@ import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
-    long_description = "\n" + fh.read()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+with open("requirements.txt", "r", encoding="utf-8") as fh:
+    requirements = fh.read()
 
-VERSION = '0.0.1a1'
+VERSION = '0.0.1a2'
 DESCRIPTION = 'A CLI tool for batch editing files'
 LONG_DESCRIPTION = 'A CLI tool developed for memory forward to help batch edit files, and their metadata.'
 
@@ -20,16 +22,19 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    package_dir={"src": "src"},
-    install_requires=[
-        "typer==0.4.1"
-    ],
+    packages=find_packages(),
+    install_requires=requirements,
+    python_requires=">=3.7",
     keywords=['python', 'memory-forward'],
     classifiers=[
         "Intended Audience :: Other Audience",
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    entry_points = '''
+        [console_scripts]
+        memory-forward=cli:cli
+    '''
 )

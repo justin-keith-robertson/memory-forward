@@ -1,10 +1,13 @@
 from typer import Typer
-import hello
-import goodbye
+from app import hello
+from app import goodbye
 
 app = Typer()
 app.command()(hello.hello)
 app.command()(goodbye.goodbye)
 
-if __name__ == "__main__":
+def cli():
     app()
+
+if __name__ == "__main__":
+    cli()
