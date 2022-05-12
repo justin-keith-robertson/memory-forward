@@ -6,8 +6,6 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read()
 
 VERSION = '0.0.1a2'
 DESCRIPTION = 'A CLI tool for batch editing files'
@@ -23,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=requirements,
+    install_requires=["typer==0.4.1"],
     python_requires=">=3.7",
     keywords=['python', 'memory-forward'],
     classifiers=[
