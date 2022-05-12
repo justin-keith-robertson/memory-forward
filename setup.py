@@ -26,7 +26,7 @@ setup(
     ],
     keywords=['python', 'memory-forward'],
     classifiers=[
-        "Intended Audience :: Photo Organizers",
+        "Intended Audience :: Other Audience",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
