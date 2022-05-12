@@ -1,6 +1,6 @@
 from typer import Typer
-import hello
-import goodbye
+from app import hello
+from app import goodbye
 
 app = Typer()
 app.command()(hello.hello)
