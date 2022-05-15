@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
     packages=find_packages(),
     py_modules=["memory_forward"],
-    install_requires=["typer==0.4.1"],
+    install_requires=["typer==0.4.1", "exif==1.3.5"],
     python_requires=">=3.9",
     keywords=['python', 'memory-forward'],
     classifiers=[
